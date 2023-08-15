@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/hero_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:src="@android:drawable/ic_menu_camera"/>
+        <EditText
+            android:id="@+id/hero_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/hero_image"
+            android:layout_alignTop="@id/hero_image"
+            android:layout_marginStart="16dp"
+            android:hint="Tipo Caso"/>
+        <EditText
+            android:id="@+id/alter_ego_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/hero_image"
+            android:layout_alignBottom="@id/hero_image"
+            android:layout_marginStart="16dp"
+            android:hint="Caso"
+            android:autofillHints="" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/hero_image"
+            android:layout_marginTop="16dp"
+            android:background="@color/black"/>
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="bio"/>
+        <EditText
+            android:id="@+id/bio_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bio_text"
+            android:layout_marginTop="16dp"
+            android:hint="short_bio"/>
+        <TextView
+            android:id="@+id/power_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/bio_edit"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="power"/>
+        <RatingBar
+            android:id="@+id/power_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/power_text"
+            android:progressTint="@color/red"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="grabar"/>
+    </RelativeLayout>
+</layout>
